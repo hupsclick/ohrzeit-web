@@ -1,0 +1,38 @@
+{
+  "name": "ohrzeitapp",
+  "version": "1.0.0",
+  "description": "Meine Uhr-Desktop-App als Electron-Version",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . OhrzeitApp --platform=win32 --arch=x64 --out=dist --overwrite",
+    "dist": "electron-builder --win"
+  },
+  "author": "Ma",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.example.ohrzeitapp",
+    "productName": "OhrzeitApp",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/cover.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "OhrzeitApp"
+    }
+  }
+}
+

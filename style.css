@@ -1,0 +1,328 @@
+	body {
+		font-family: Arial, sans-serif;
+		text-align: center;
+		background-color: #17093a;
+		color: white;
+		min-height: 100vh;
+		margin: 0;
+		touch-action: manipulation;
+	}
+
+	.container {
+		position: relative;
+		width: 100%;
+		max-width: 1200px; /* Erhöhte max-width für größere Bildschirme */
+		min-height: 100vh;
+		margin: 0 auto;
+		padding: 20px;
+		overflow-y: auto;
+	}
+
+/* Impressum und Datenschutz  START */		
+	footer {
+		position: absolute;
+		top: 87%;
+		left: 50%;
+		transform: translate(-50%);
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 0.3vw;
+		font-size: 1.0vw;
+	}
+
+	footer a {
+		margin-right: 16px;
+		text-decoration: none;
+		color: #F2E6D0;
+	}
+
+	footer a:hover {
+		opacity: 0.7;
+	}
+/* Impressum und Datenschutz  ENDE */	
+	
+	h1 {
+		position: absolute;
+		top: 2.5%;
+		left: 50%;
+		transform: translate(-50%);
+		color: #F2E6D0;
+		font-size: 1.5vw;
+		font-weight: 100;
+		letter-spacing: 0.4vw;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		z-index: 3;
+	 /* Entferne Margin, falls vorhanden      margin: 0; */
+	}
+		
+        button {
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            width: 70px;
+            height: 70px;
+            background-color: #1a1245;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 
+                -5px 5px 5px rgba(0, 0, 0, 0.3),
+                -5px 5px 10px rgba(0, 0, 0, 0.5),
+                0px 0px 10px 13px rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .buttonRound {
+            height: 6em;
+            width: 6em;
+            border-radius: 100%;
+        }
+
+        .buttonDark {
+            background-size: auto 150%;
+            background-position: 0 100%;
+        }
+
+        .buttonDark:hover {
+            background-position: 0 50%;
+        }
+
+        .buttonDark:active {
+            color: #000;
+            background-position: 0 50%;
+            background: #1d163f;
+            box-shadow: inset 0 2px 3px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .1);
+        }
+
+		.icon {
+			font-size: 45px; /* Aktuelle Größe, kann angepasst werden */
+			width: 45px; /* Breite für das Container-Element */
+			height: 45px; /* Höhe für das Container-Element */
+			display: inline-block; /* Um sicherzustellen, dass Breite und Höhe greifen */
+			/* Optional: Align zur Mitte  vertical-align: middle; */
+		}
+
+        .icon:before {
+            font-style: normal;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            color: #DDD;
+            content: attr(data-char);
+        }
+
+        .volume-controller {
+            display: flex;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            z-index: 2;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: #ddd;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 48px;
+            height: 48px;
+            left: 50.1%;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            margin-top: -8px;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #F2E6D0;
+			border: 10px solid #1F1A44;
+            cursor: pointer;
+        }
+
+
+
+        .status {
+            position: absolute;
+            top: 56%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            color: #555;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .warning {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+.freq-controller {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translateX(-50%) rotate(-90deg);
+    width: 130px;
+    z-index: 2;  
+    display: flex; /* Flexbox für die Anordnung */
+    flex-direction: column; /* Vertikale Anordnung */
+    gap: 0px; /* Abstand zwischen den Schiebereglern */
+    max-height: 400px;
+    cursor: pointer;
+}
+
+.freq-controller > div {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Vertikale Anordnung für Schieberegler */
+}
+
+.freq-display {
+    display: flex; /* Horizontal Anordnung */
+    justify-content: space-between; /* Platz zwischen Label und Indikator */
+    align-items: center; /* Vertikale Ausrichtung */
+    width: 100%; /* Vollständige Breite nutzen */
+}
+
+.freq-controller label {
+	padding-left: 38%;
+    color: white;
+    font-size: 0.8em;
+    margin-right: 65px; /* Abstand zwischen label und Indikator */
+	transform: translateX(-50%) rotate(90deg);
+	width: 130px;
+}
+
+.freq-controller .freq-indicator {
+    /* Füge hier Styles für die Frequenzanzeige hinzu, falls benötigt */
+	margin-top: 30%;
+    color: white; /* Beispieltextfarbe */
+	transform: translateX(-50%) rotate(90deg);
+}
+
+.freq-controller input[type="range"] {
+    width: 100%; /* Slider bleibt 100% Breite */
+    margin-top: 5px; /* Abstand zwischen Hz-Anzeige und Slider */
+}
+
+        /* Responsive Anpassungen für vertikales Fenster (390x844px) */
+        @media (max-width: 390px) {
+            h1 {			
+				position: relative;
+                text-align: center;
+                top: 18px;
+                left: 55%;
+	            font-size: 1.0em;
+		        letter-spacing: 5px;
+            }
+            button {
+                top: 10%;
+            }
+            input[type="range"]::-moz-range-thumb {
+            width: 45px;
+            height: 45px;
+            }
+            .volume-controller {
+                top: 25%;
+            }
+            .status {
+                top: 32%;
+                font-size: 0.8em;
+                width: 80%;
+            }
+            .freq-controller {
+                top: 33%;
+				left: 50%;
+				width: 190px;
+				gap:0px;
+				transform: translateX(-50%) rotate(0deg);
+            }
+			.freq-controller label {
+				transform: translateX(-50%) rotate(0deg);
+			}
+			.freq-controller .freq-indicator {
+				transform: translateX(-50%) rotate(0deg);
+			}
+	        footer {
+			   position: absolute;
+		       top: 120px;
+		       left: 50%;
+			   font-size: 17px;
+	        }
+        }
+
+        /* Responsive Anpassungen für horizontales Fenster (844x390px) */
+        @media (min-width: 391px) and (max-width: 844px) {
+            h1 {			
+				display: none;
+            }			
+            footer {			
+				position: absolute;
+                text-align: center;
+                top: 76%;
+                left: 50%;
+	            font-size: 1.0em;
+            }
+
+            .icon:before {
+                font-size: 40px;
+            }
+            button {
+                top: 5% !important; /* Erzwingt die Änderung */
+				width: 60px !important;
+				height: 60px !important;
+				transform: translateX(-50%) !important;
+            }
+
+            .volume-controller {
+                top: 27%;
+            }
+            input[type="range"]::-moz-range-thumb {
+            width: 45px;
+            height: 45px;
+            }
+            .status {
+                top: 37%;
+                font-size: 0.7em;
+                width: 90%;
+            }
+            .freq-controller {
+                top: 55.5%;
+				left: 22.7%;
+				max-height: 80px;
+				gap:0px;
+				width: 100px;
+            }
+        }
+		
+	@media (max-width: 390px) {
+		.freq-controller input[type="range"] {
+			width: 200px;
+			margin: 5px 0;
+		}
+		button {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	

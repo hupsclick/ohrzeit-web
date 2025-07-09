@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+
+    <link rel="shortcut icon" href="bilder/cover.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="bilder/cover-192.png">
+    <title>Ohrzeit</title>
+    <meta name="author" content="Hupsclick" />
+    <meta name="description" content="Ein Echtzeit-Audioverstärker für Menschen mit Hörbeeinträchtigungen.">
+    <meta name="theme-color" content="#C07F41">
+    <link rel="manifest" href="/manifest.json">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Ohrzeit-v.1.0.1-win</h1>
+    <div class="container">
+
+        <button id="startBtn" class="buttonDark buttonRound">
+            <i class="icon" data-char="🎧" style="font-size: 45px;"></i>
+        </button>
+        <button id="stopBtn" class="buttonDark buttonRound" style="display:none;">
+            <i class="icon" data-char="🛑️" style="font-size: 45px;"></i>
+        </button>
+
+        <div class="volume-controller">
+            <input type="range" id="volume" min="0" max="5.0" step="0.01" value="1.0">
+            <div class="volume-indicator"></div>
+        </div>
+        <div class="status" id="status">Bereit. Bitte Kopfhörer verwenden.</div>
+       <div class="freq-controller">
+    <div>
+        <div class="freq-display">
+            <label>250 Hz</label>
+            <div class="freq-indicator" id="indicator-250"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="250" min="0" max="60" step="1">
+    </div>
+    <div>
+        <div class="freq-display">
+            <label>500 Hz</label>
+            <div class="freq-indicator" id="indicator-500"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="500" min="0" max="60" step="1">
+    </div>
+    <div>
+        <div class="freq-display">
+            <label>1 kHz</label>
+            <div class="freq-indicator" id="indicator-1000"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="1000" min="0" max="60" step="1">
+    </div>
+    <div>
+        <div class="freq-display">
+            <label>2 kHz</label>
+            <div class="freq-indicator" id="indicator-2000"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="2000" min="0" max="60" step="1">
+    </div>
+    <div>
+        <div class="freq-display">
+            <label>4 kHz</label>
+            <div class="freq-indicator" id="indicator-4000"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="4000" min="0" max="60" step="1">
+    </div>
+    <div>
+        <div class="freq-display">
+            <label>8 kHz</label>
+            <div class="freq-indicator" id="indicator-8000"></div>
+        </div>
+        <input type="range" class="freq-slider" data-freq="8000" min="0" max="60" step="1">
+    </div>
+</div>
+
+
+<!-- Lade Impressum und Datenschutz   START -->
+<footer>
+    <a href="index.html">Ohrzeit</a>
+    <a href="impressum.html">Impressum</a>
+	<a href="datenschutz.html">Datenschutz</a>
+</footer>
+<!-- Lade Impressum und Datenschutz   ENDE -->
+ <script src="script.js"></script>
+ 
+ </body>
+</html>

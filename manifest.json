@@ -1,0 +1,71 @@
+{
+  "name": "Ohrzeit",
+  "short_name": "Ohrzeit",
+  "description": "Ein Echtzeit-Audioverstärker für Menschen mit Hörbeeinträchtigungen.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#222",
+  "theme_color": "#C07F41",
+  "icons": [
+    {
+      "src": "bilder/cover.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+	    {
+      "src": "bilder/cover-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/cover-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/cover-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/logo.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/logo-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/favicon.ico",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/favicon-180.ico",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/favicon-192.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "bilder/favicon-512.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
