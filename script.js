@@ -227,17 +227,15 @@ stopBtn.addEventListener('click', stopAudio);
 
 // Service Worker Registrierung
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        console.log('Versuche Service Worker zu registrieren...');
-        navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-                console.log('Service Worker registriert mit Scope:', registration.scope);
-            })
-            .catch((err) => {
-                console.error('Fehler beim Registrieren:', err);
-            });
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function(reg) {
+      console.log('Service Worker registriert mit Scope:', reg.scope);
+    }).catch(function(error) {
+      console.error('Fehler beim Registrieren des Service Workers:', error);
     });
+  });
 }
+
 
 // Tastatur Belegung für Navigation
 document.addEventListener('keydown', function(event) {
